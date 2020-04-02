@@ -1,22 +1,19 @@
 @import "mixins";
-
 @font-face {
-  font-family: "NotoSansSC-Black";
-  src: url('/assets/utils/fonts/NotoSansSC-Black.eot')  /* IE9 Compat Modes */
-       url('/assets/utils/fonts/NotoSansSC-Black.eot?#iefix')  format('embedded-opentype'), /* IE6-IE8 */
-       url('/assets/utils/fonts//NotoSansSC-Black.woff') format('woff'),  /* Pretty Modern Browsers */
-       url('/assets/utils/fonts/NotoSansSC-Black.ttf') format('truetype'),/* Safari, Android, iOS */
+    font-family: "Roboto";
+    src: url('/assets/utils/fonts/Roboto/Roboto-Bold_1.eot')/* IE9 Compat Modes */
+    url('/assets/utils/fonts/Roboto/Roboto-Bold_1.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('/assets/utils/fonts/Roboto/Roboto-Bold_1.woff') format('woff'), /* Pretty Modern Browsers */
+    url('/assets/utils/fonts/Roboto/Roboto-Bold_1.ttf') format('truetype'), /* Safari, Android, iOS */
 }
 
-
-// HelveticaNeueCyr - BLACK
 // @font-face {
-//   font-family: "HelveticaNeueCyr-Black";
-//   src: url('/assets/utils/fonts/HelveticaNeueCyr/Black/HelveticaNeueCyr-Black.eot'); /* IE9 Compat Modes */
-//   src: url('/assets/utils/fonts/HelveticaNeueCyr/Black/HelveticaNeueCyr-Black.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-//        url('/assets/utils/fonts/HelveticaNeueCyr/Black/HelveticaNeueCyr-Black.woff') format('woff'), /* Pretty Modern Browsers */
-//        url('/assets/utils/fonts/HelveticaNeueCyr/Black/HelveticaNeueCyr-Black.ttf')  format('truetype'), /* Safari, Android, iOS */
-//        //  url('/assets/fonts/HelveticaNeueCyr/Black/HelveticaNeueCyr-Black.svg') format('svg'); /* Legacy iOS */
+//     font-family: "Helvetica-Base";
+//     src: url('/assets/fonts/Helvetica/Base/Helvetica-Base.eot');
+//     /* IE9 Compat Modes */
+//     src: url('/assets/fonts/Helvetica/Base/Helvetica-Base.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+//     url('/assets/fonts/Helvetica/Base/Helvetica-Base.woff') format('woff'), /* Pretty Modern Browsers */
+//     url('/assets/fonts/Helvetica/Base/Helvetica-Base.ttf') format('truetype'), /* Safari, Android, iOS */
+//     url('/assets/fonts/Helvetica/Base/Helvetica-Base.svg') format('svg');
+//     /* Legacy iOS */
 // }
-// NotoSansSC-Black
-
