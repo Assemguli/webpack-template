@@ -12,12 +12,8 @@ const PATHS = {
     assets: 'assets/'
 };
 
-// const PAGES_DIR = PATHS.src;
-// const PAGES = fs
-//     .readdirSync(PAGES_DIR)
-//     .filter(fileName => fileName.endsWith(".html"));
-const PAGES = fs.readdirSync(PATHS.src).filter(fileName => fileName.endsWith('.html'))
-
+const PAGES_DIR = `${PATHS.src}/pages/`
+const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.html'))
 
 module.exports = {
 
@@ -127,16 +123,13 @@ module.exports = {
             { from: `${PATHS.src}/${PATHS.assets}fonts`, to: `${PATHS.assets}fonts` },
             { from: `${PATHS.src}/static`, to: '', },
         ]),
-        // ...PAGES.map(
-        //     page =>
-        //     new HtmlWebpackPlugin({
-        //         template: `${PAGES_DIR}/${page}`,
-        //         filename: `./${page}`
-        //     })
-        // )
+        // ...PAGES.map(page => new HtmlWebpackPlugin({
+        //     template: `${PATHS.src}/${page}`,
+        //     filename: `./${page}`
+        // })),
         ...PAGES.map(page => new HtmlWebpackPlugin({
-            template: `${PATHS.src}/${page}`,
+            template: `${PAGES_DIR}/${page}`,
             filename: `./${page}`
-        })),
+        }))
     ]
 };
