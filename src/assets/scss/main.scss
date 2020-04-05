@@ -1,19 +1,21 @@
 @import "utils/reset.scss";
 @import "utils/fonts.scss";
+@import "utils/flex.scss";
 @import "utils/mixins.scss";
 @import "utils/settings.scss";
-@import "utils/libs.scss";
 @import "modules/header.scss";
+@import "modules/button.scss";
+@import "utils/helpers.scss";
 html {
-    line-height: $mainLineHeight;
-    font-size: $mainFontSize;
-    color: $mainFontColor;
+    line-height: $baseLineHeight;
+    font-size: $base-fontSize;
+    color: $base-fontColor;
     height: 100%;
     @media screen and (max-width: $desktopWidth) {
-        font-size: 32px;
+        font-size: 14px;
     }
     @media screen and (max-width: $tableWidth) {
-        font-size: 16px;
+        font-size: 13px;
     }
     @media screen and (max-width: $phoneWidth) {
         font-size: 12px;
@@ -23,9 +25,9 @@ html {
 body {
     margin: 0;
     padding: 0;
-    font-family: $mainFont;
-    font-size: $mainFontSize;
-    font-weight: $mainFontWeight;
+    font-family: $base-font-family;
+    font-size: $base-fontSize;
+    font-weight: $base-fontWeight;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -56,74 +58,18 @@ li {
     list-style-type: none;
 }
 
-section,
-.section {
-    position: relative;
-    padding: 40px 0;
-    @media screen and (max-width: $smDesktopWidth) {
-        padding: 36px 0;
+.wrapper {
+    @include flex;
+    @include flex-direction(column);
+    @include flex-align(left, stretch);
+    flex: 1 1 auto;
+    @media screen and (max-width: $lgDesktopWidth) {
+        font-size: rem(14);
     }
     @media screen and (max-width: $tableWidth) {
-        padding: 28px 0;
+        font-size: rem(13);
     }
     @media screen and (max-width: $phoneWidth) {
-        padding: 20px 0;
+        font-size: rem(12);
     }
 }
-
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    min-height: 100vh;
-    min-width: 100vh;
-}
-
-.content-wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-.wrapper {
-    width: 100%;
-    flex: 0 0 auto;
-    position: relative;
-    margin: 0 auto;
-    max-width: $desktopWidth;
-    @media screen and (max-width: $smDesktopWidth) {
-        font-size: 1rem;
-    }
-    @media screen and (max-width: $tableWidth) {
-        font-size: 1.2rem;
-    }
-    @media screen and (max-width: $phoneWidth) {
-        font-size: 0.75rem;
-    }
-}
-
-// Modules:
-// example: @import "modules/my-module.scss";
-h1 {
-    color: blueviolet;
-}
-
-h2 {
-    color: blueviolet;
-}
-
-h3 {
-    color: blueviolet;
-}
-
-h4 {
-    color: green;
-}
-
-// .main {
-//     background-image: url('/assets/img/css.jpg');
-//     width: 100%;
-// }
-// .main {
-//     color: burlywood;
-// }

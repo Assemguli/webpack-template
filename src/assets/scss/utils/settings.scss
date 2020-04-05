@@ -2,42 +2,50 @@
    ========================================================================== */
 
 // Font
-$mainFont: 'Montserrat',
-Helvetica,
+$base-font-family:'Noto Sans SC',
+'Fira Sans',
+'Roboto',
+"Segoe UI",
+Frutiger,
+"Frutiger Linotype",
+"Dejavu Sans",
+"Helvetica Neue",
 Arial,
 sans-serif;
 // Size
-$mainFontColor: #101010;
-$mainFontSize: 18px;
-$mainFontWeight: 400;
-$mainLineHeight: 1.4;
+$base-fontColor: #101010;
+$base-fontSize: 14px;
+$base-fontWeight: 400;
+$baseLineHeight: 1.4;
 $desktopWidth: 1280px;
-$smDesktopWidth: 1920px;
+$lgDesktopWidth: 1920px;
 $tableWidth: 768px;
 $smTableWidth: 640px;
 $phoneWidth: 480px;
 $smPhoneWidth: 320px;
-
-/*
- All colors taken from:
- https://github.com/vedees/uimini
-*/
-
-// Main color
-$default-color: #ffffff;
-$primary-color: #444ce0;
-$success-color: #26de81;
-$danger-color: #fc5c65;
-$warning-color: #fed330;
-$light-color: #999999;
-$purple-color: #8854d0;
-// Neutral Color
-$neutral-primary: #303133;
-$neutral-regular: #606266;
-$neutral-secondary: #909399;
-$neutral-placeholder: #C0C4CC;
-// Border Color
-$border-base: #DCDFE6;
-$border-light: #E4E7ED;
-$border-lighter: #EBEEF5;
-$border-lightex: #F2F6FC;
+$base-color: #1D2327;
+$base-background-color: #fff;
+$base-font-size: 14px;
+$base-line-height: 1.5;
+$body-antialiased: true;
+$base-border-color: #ccc;
+$base-border: solid 0.0625rem $base-border-color;
+$base-margin: 1rem;
+$base-padding: 1rem;
+$font-weight-normal: normal;
+$font-weight-bold: 600;
+$font-font-color: #262626;
+$base-radius: 0.25rem;
+$base-text-direction: ltr;
+$base-font-color: #262626;
+$base-link-color: #0165A7;
+$light-gray: #999;
+$medium-gray: #777777;
+$dark-gray: #555555;
+$black: #0a0a0a;
+$white: #fefefe;
+$success: #6A9F72;
+$error: #FF4646;
+$color-secondary: #F1523E;
+$color-tertiary: #FF8900;
+$title-font-size: 1rem;

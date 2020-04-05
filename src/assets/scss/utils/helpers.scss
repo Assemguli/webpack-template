@@ -1,0 +1,225 @@
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+// Helper Classes 
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// 1-h. Shrink Class
+// 2-h. Horizontal Alignment
+// 3-h. Vertical Alignment
+// 4-h. Margin
+// 5-h. text and color
+// 6-h. Hide
+// 7-h. cancel button
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+// 1-h. Shrink Class
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+@include b(shrink) {
+    flex: 0 0 auto;
+    overflow: visible;
+}
+
+// .shrink
+// 2-h. Horizontal Alignment
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+@include b(align-right) {
+    justify-content: flex-end;
+}
+
+@include b(align-center) {
+    justify-content: center;
+}
+
+@include b(align-justify) {
+    justify-content: space-between;
+}
+
+@include b(align-spaced) {
+    justify-content: space-around;
+}
+
+// 3-h. Vertical Alignment
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+@include b(align-top) {
+    align-items: flex-start;
+}
+
+@include b(align-self-top) {
+    align-self: flex-start;
+}
+
+@include b(align-bottom) {
+    align-items: flex-end;
+}
+
+@include b(align-self-bottom) {
+    align-self: flex-end;
+}
+
+@include b(align-middle) {
+    align-items: center;
+}
+
+@include b(align-self-middle) {
+    align-self: center;
+}
+
+@include b(align-stretch) {
+    align-items: stretch;
+}
+
+@include b(align-self-stretch) {
+    align-self: stretch;
+}
+
+@include b(text-center) {
+    text-align: center;
+}
+
+@include b(text-end) {
+    text-align: end;
+}
+
+// 4-h. Margin
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+@include b(m-t) {
+    margin-top: $base-margin;
+}
+
+@include b(m-r) {
+    margin-right: $base-margin;
+}
+
+@include b(m-b) {
+    margin-bottom: $base-margin;
+}
+
+@include b(m-l) {
+    margin-left: $base-margin;
+}
+
+@include b(hf-m-t) {
+    margin-top: $base-margin/2;
+}
+
+@include b(hf-m-r) {
+    margin-right: $base-margin/2;
+}
+
+@include b(hf-m-b) {
+    margin-bottom: $base-margin/2;
+}
+
+@include b(hf-m-l) {
+    margin-left: $base-margin/2;
+}
+
+@include b(pl-none) {
+    padding-left: 0;
+}
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// 5. Text 
+@include b(text) {
+    @include flex;
+    @include flex-align(left, middle);
+    color: $base-fontColor;
+    @include m(secondary) {
+        color: $color-secondary;
+    }
+}
+
+@include b(text-gray) {
+    color: $medium-gray;
+    @include m(col) {
+        @include flex;
+        @include flex-direction (column);
+    }
+}
+
+@include b(text-dark) {
+    color: $dark-gray;
+}
+
+@include b(text-light) {
+    color: $light-gray;
+}
+
+@include b(text-secondary) {
+    color: $color-secondary;
+}
+
+@include b(text-tertiary) {
+    color: $color-tertiary;
+}
+
+@include b(bold) {
+    font-weight: $font-weight-bold;
+}
+
+@include b(bold-m) {
+    font-weight: 500;
+}
+
+@include b(italic) {
+    font-style: italic;
+}
+
+@include b(text-s) {
+    font-size: .75rem;
+}
+
+@include b(text-m) {
+    font-size: $title-font-size;
+}
+
+// 6. Hide
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+@include b(hide) {
+    display: none;
+}
+
+@include b(uppercase) {
+    text-transform: uppercase;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+input[type="number"]:hover,
+input[type="number"]:focus {
+    -moz-appearance: number-input;
+}
+
+input[type=time]::-webkit-inner-spin-button,
+input[type=time]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="time"] {
+    -moz-appearance: textfield;
+}
+
+input[type="time"]:hover,
+input[type="time"]:focus {
+    -moz-appearance: number-input;
+}
+
+// @include b(link) {
+//     display: inline;
+//     cursor: pointer;
+//     color: #0964CE;
+//     fill: #0964CE;
+//     transition: text-decoration 0.25s ease-out;
+//     text-decoration: underline;
+//     white-space: nowrap;
+//     &:focus,
+//     &:hover {
+//         color: $base-link-color;
+//     }
+// }

@@ -1,0 +1,33 @@
+@include b(button) {
+    display: inline-flex;
+    box-sizing: border-box;
+    padding: rem(10);
+    margin: 0;
+    // border: solid 1px #ccc;
+    background-color: #E4F1FC;
+    border-radius: 50px;
+    outline: none;
+    fill: #fff;
+    line-height: 1;
+    color: #000;
+    transition: background-color 0.25s ease-out, border-color 0.25s ease-out, color 0.25s ease-out;
+    &:hover,
+    &:focus {
+        outline: none;
+        cursor: pointer;
+    }
+    &:disabled {
+        pointer-events: none;
+        background: #666;
+        border: 1px solid transparent;
+    }
+}
+
+@include b(socials) {
+    @include e(item) {
+        @include flex;
+        @include flex-direction(row);
+        @include flex-align(left, center);
+        margin-right: rem(8);
+    }
+}
