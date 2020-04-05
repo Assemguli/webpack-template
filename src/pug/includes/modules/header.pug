@@ -1,8 +1,17 @@
 header
-    .container
-        li
-          a(href='') link
-        li
-          a(href='') link
-        li
-          a(href='') link
+  section
+    .content-wrapper
+      +link('yandex.ru', 'YANDEX')
+      +link('google.ru', 'GOOGLE')
+      +link('.ru', 'YANDEX')
+
+      +list('social', 'vk', 'fb', 'tw', 'inst')
+      +list('news', 'vk', 'fb', 'tw', 'inst')
+      +list('humor', 'vk', 'fb', 'tw', 'inst')
+
+      ul.nav
+        +nav('', 'LINK1', '')
+        +nav('', 'LINK2')
+        +nav('', 'LINK3')
+        +nav('', 'LINK4')
+

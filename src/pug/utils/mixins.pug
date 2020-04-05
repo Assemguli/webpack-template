@@ -2,3 +2,22 @@ mixin item (title, descr)
     .item
     h2.item-title= title
     p.item=descr= descr
+
+mixin link(href,name)
+    a(href=href)= name
+
+
+mixin list(classname, ...items)
+    ul(class= "list list__"+classname)
+        each item in items
+            li(class= "social-link social-link__" +item)= item
+
+mixin nav(link, title)
+    if(title === 'LINK1')
+        li.nav__item.nav__item--active
+            a(href="link").nav__link=title
+                
+    else
+        li.nav__item
+            a(href="link").nav__link=title
+
